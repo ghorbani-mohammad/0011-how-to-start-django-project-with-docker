@@ -1,5 +1,5 @@
 FROM python:3.10-alpine
-RUN apk add build-base python3-dev
+RUN apk add build-base python3-dev postgresql-dev
 
 WORKDIR /app
 COPY requirements.txt requirements.txt

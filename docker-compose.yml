@@ -6,3 +6,10 @@ services:
       - .:/app
     ports:
       - 80:80
+  db:
+    container_name: db
+    image: postgres:14.5-alpine
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    env_file:
+      - .env
